@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Motion Detection</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <!-- Use the "container" class for styling the main content -->
+    <div class="center-container">
+        <h1>Motion Detection</h1>
+        
+        {% if motion_detected %}
+            <!-- Use "motion-detected" class for styling the message -->
+            <p class="motion-detected">Motion Detected!!</p>
+        {% else %}
+            <!-- Use "no-motion-detected" class for styling the message -->
+            <p class="no-motion-detected">No Motion Detected!!</p>
+        {% endif %}
+        
+        <form method="POST" action="/start_detection">
+            <!-- Use "btn-start" class for styling the Start Detection button -->
+            <button class="btn-start" type="submit">Start Detection</button>
+        </form>
+        
+        <form method="POST" action="/stop_detection">
+            <!-- Use "btn-stop" class for styling the Stop Detection button -->
+            <button class="btn-stop" type="submit">Stop Detection</button>
+        </form>
+    </div>
+</body>
+</html>

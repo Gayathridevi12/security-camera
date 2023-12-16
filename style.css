@@ -1,0 +1,81 @@
+/* Reset some default styles */
+body, p, h1, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('/static/background.jpg'); /* Path to your background image */
+    background-size: cover; /* Maintain aspect ratio and cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Fixed background image */
+    background-position: center center; /* Center the image both horizontal*/
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the body fill the entire viewport height */
+}
+
+.center-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+}
+
+p {
+    font-size: 16px;
+    font-family: cursive;
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Button styles */
+button {
+    background-color: rgb(73, 4, 73);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+   
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Form styles */
+form {
+    margin: 20px 0;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
